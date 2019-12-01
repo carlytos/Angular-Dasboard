@@ -7,22 +7,34 @@ import { DasboardComponent } from './dasboard/dasboard.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { SharedModule } from '../pages/shared.module';
 import { PagesRouter } from './pages.routes';
+import { FormsModule } from '@angular/forms';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraficoDonutComponent } from '../components/grafico-donut/grafico-donut.component';
+
+
+
 
 @NgModule({
     declarations: [
         DasboardComponent,
         ProgressComponent,
         Graficas1Component,
-        PagesComponent
+        PagesComponent,
+        IncrementadorComponent,
+        GraficoDonutComponent
     ],
     exports: [
         DasboardComponent,
         ProgressComponent,
         Graficas1Component,
+        GraficoDonutComponent
     ],
     imports: [
         SharedModule,
-        PagesRouter
+        PagesRouter,
+        FormsModule,
+        ChartsModule
     ]
 })
 export class PagesModule {}
