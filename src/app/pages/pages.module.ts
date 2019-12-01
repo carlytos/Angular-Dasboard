@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { ChartsModule } from 'ng2-charts';
 import { GraficoDonutComponent } from '../components/grafico-donut/grafico-donut.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -34,7 +35,9 @@ import { GraficoDonutComponent } from '../components/grafico-donut/grafico-donut
         SharedModule,
         PagesRouter,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        [CommonModule],
+
     ]
 })
 export class PagesModule {}
